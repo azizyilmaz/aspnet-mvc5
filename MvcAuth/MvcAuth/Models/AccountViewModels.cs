@@ -8,6 +8,9 @@ namespace MvcAuth.Models
         [Required]
         [Display(Name = "Email")]
         public string Email { get; set; }
+        public string City { get; set; }
+        public System.DateTime? BirthDate { get; set; }
+        public int FavouriteNumber { get; set; }
     }
 
     public class ExternalLoginListViewModel
