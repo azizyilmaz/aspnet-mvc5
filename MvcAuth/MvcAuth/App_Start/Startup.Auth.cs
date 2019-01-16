@@ -6,6 +6,7 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using MvcAuth.Models;
+using System.Configuration;
 
 namespace MvcAuth
 {
@@ -60,8 +61,8 @@ namespace MvcAuth
 
             app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             {
-                ClientId = "1046869775222-992kcv5slh5pgq5vjakr53bkkbk2gqpd.apps.googleusercontent.com",
-                ClientSecret = "JEeejzOh_rL0uIhoSeN_CKmw"
+                ClientId = ConfigurationManager.AppSettings["ClientId"],
+                ClientSecret = ConfigurationManager.AppSettings["ClientSecret"]
             });
         }
     }
