@@ -26,7 +26,9 @@ namespace MvcAuth
         {
             var apiKey = ConfigurationManager.AppSettings["SendGridApiKey"];
             var client = new SendGridClient(apiKey);
-            var from = new EmailAddress("azizxyilmaz@outlook.com", "Aziz Yılmaz");
+            var from = new EmailAddress(
+                ConfigurationManager.AppSettings["EmailAddress"],
+                ConfigurationManager.AppSettings["Name"]);
             var subject = message.Subject;
             var to = new EmailAddress(message.Destination);
             var plainTextContent = message.Body;
