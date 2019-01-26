@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcAuth", "MvcAuth\MvcAuth.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductsApi", "ProductsApi\ProductsApi.csproj", "{B6A89FDE-A408-4806-B187-F95F87A4857F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooksAPI", "BooksAPI\BooksAPI.csproj", "{7C223A1E-4A2A-46C7-8339-B448E58FD594}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B6A89FDE-A408-4806-B187-F95F87A4857F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6A89FDE-A408-4806-B187-F95F87A4857F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6A89FDE-A408-4806-B187-F95F87A4857F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C223A1E-4A2A-46C7-8339-B448E58FD594}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C223A1E-4A2A-46C7-8339-B448E58FD594}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C223A1E-4A2A-46C7-8339-B448E58FD594}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C223A1E-4A2A-46C7-8339-B448E58FD594}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
