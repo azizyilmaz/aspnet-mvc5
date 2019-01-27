@@ -14,4 +14,4 @@ https://stackoverflow.com/a/14873859/6813634<br/>
 Web API2<br/>
 1.Get Started with ASP.NET Web API 2 (C#)<br/>
 2.Create a REST API with Attribute Routing in ASP.NET Web API 2<br/>
-<br/>
+3.Using Web API 2 with Entity Framework 6: How to program CRUD (create, read, update, delete) operations in Web API.<br/>
