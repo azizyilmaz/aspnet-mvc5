@@ -18,16 +18,33 @@ namespace BookService.Controllers
         private BookServiceContext db = new BookServiceContext();
 
         // GET: api/Books
-        public IQueryable<Book> GetBooks()
+        public IQueryable<BookDTO> GetBooks()
         {
-            return db.Books;
+            var books = from b in db.Books
+                        select new BookDTO()
+                        {
+                            AuthorName = b.Authorx.Name,
+                            Id = b.Id,
+                            Title = b.Title
+                        };
+            return books;
         }
 
         // GET: api/Books/5
-        [ResponseType(typeof(Book))]
+        [ResponseType(typeof(BookDetailDTO))]
         public async Task<IHttpActionResult> GetBook(int id)
         {
-            Book book = await db.Books.FindAsync(id);
+            var book = await db.Books.Include(b => b.Authorx).Select(b =>
+                new BookDetailDTO()
+                {
+                    Id = b.Id,
+                    Title = b.Title,
+                    Year = b.Year,
+                    Price = b.Price,
+                    AuthorName = b.Authorx.Name,
+                    Genre = b.Genre
+                }).SingleOrDefaultAsync(b => b.Id == id);
+
             if (book == null)
             {
                 return NotFound();
@@ -83,7 +100,16 @@ namespace BookService.Controllers
             db.Books.Add(book);
             await db.SaveChangesAsync();
 
-            return CreatedAtRoute("DefaultApi", new { id = book.Id }, book);
+            db.Entry(book).Reference(x => x.Authorx).Load();
+
+            var dto = new BookDTO()
+            {
+                AuthorName = book.Authorx.Name,
+                Id = book.Id,
+                Title = book.Title
+            };
+
+            return CreatedAtRoute("DefaultApi", new { id = book.Id }, dto);
         }
 
         // DELETE: api/Books/5
