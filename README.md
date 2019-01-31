@@ -18,3 +18,5 @@ Web API2<br/>
 4.Create Data Transfer Objects (DTOs)<br/>
 5.Create the JavaScript Client<br/>
 6.Create the View (UI)<br/>
+7.Display Item Details<br/>
+8.Add a New Item to the Database<br/>
