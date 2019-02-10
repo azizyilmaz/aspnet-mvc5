@@ -21,8 +21,8 @@ Web API2<br/>
 7.Display Item Details<br/>
 8.Add a New Item to the Database<br/>
 9.Unit Testing ASP.NET Web API 2<br/>
-<br/>
-<br/>
+SignalR<br/>
+1.Real-time chat with SignalR 2<br/>
 <br/>
 <br/>
 <br/>
